@@ -2,6 +2,57 @@ Group E project for 4300...
 
 A couple of notes for the project...
 
-Single Vs Parallel Processing(Benefits multicore cpus...) [sudo apt-get install parallel]
+Single Vs Parallel Processing
 
-Need to figure out how to limit cpu freq...
+To limit the CPU frequency we need [sudo apt-get install cpulimit]
+
+EX: 
+#!/bin/bash
+
+openssl_command="openssl dgst -sha3-256 file.xz"
+$openssl_command & 
+
+pid=$(pgrep -f "$openssl_command")
+
+if [ -z "$pid" ];
+then
+  echo "Error: OpenSSL process not found."
+  exit 1
+fi
+
+echo "OpenSSL PID: $pid"  # Print the PID for verification
+
+cpu_limit=90
+sudo cpulimit -v -p $pid -l $cpu_limit  # Verbose output
+
+echo "OpenSSL process (PID $pid) is now limited to $cpu_limit% CPU usage."
+
+
+
+
+To run using parallel processing we use [sudo apt-get install parallel]
+EX:
+
+#!/bin/bash
+
+lxterminal --command="htop" &
+
+start_time=$(date +%s.%N)
+
+time openssl dgst -sha3-256 file.xz
+
+time openssl dgst -sha3-256 file2.exe
+
+end_time=$(date +%s.%N)
+
+total_time=$(echo "scale=3; ($end_time - $start_time)" | bc)
+
+echo "Total execution time: $total_time seconds"
+
+parallel openssl dgst -sha3-256 ::: file.xz file2.exe
+
+
+
+
+
+
