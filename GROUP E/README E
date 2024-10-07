@@ -55,6 +55,31 @@ parallel openssl dgst -sha3-256 ::: file.xz file2.exe
 
 
 
+Some notes 
+
+
+Factors Affecting SHA-3 Hashing Speed
+
+CPU Architecture and Speed:
+
+Clock Speed: A faster CPU clock speed directly translates to faster hashing.
+Core Count: Modern CPUs with multiple cores can potentially parallelize hashing operations, especially for larger files.
+Instruction Sets: CPUs with specialized instructions for cryptographic operations (e.g., AES-NI) can significantly accelerate SHA-3 hashing.
+File Size:
+
+Larger Files = More Time: Hashing larger files takes longer because the algorithm needs to process more data.
+Block Size: SHA-3 processes data in blocks. Larger block sizes can improve efficiency, but there's a trade-off with memory usage.   
+Implementation and Optimization:
+
+Software Library: Different SHA-3 implementations (e.g., OpenSSL, libsodium) can have varying levels of optimization.
+Compiler Optimizations: How the code is compiled can affect the efficiency of the resulting executable.   
+Assembly Language: Hand-optimized assembly code can sometimes provide the fastest performance.
+Other Factors:
+
+Memory Speed: Faster memory access can improve hashing speed, especially for larger files.
+Storage I/O: If reading the file from a slow storage device is a bottleneck, it will limit the overall hashing speed.
+
+
 
 
 
