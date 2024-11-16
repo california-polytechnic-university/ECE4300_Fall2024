@@ -4,15 +4,15 @@ aead.c : benchmarking using the driectory to files on your system. While this wo
 
 aead_updated.c : this code allows for processing "large" amounts of data by simply iterating benchmarking 1MB of data on a loop until you process the amount you desired. Whats more this also allows us to benchmark multiple cores by using threads. Where 1 thread = 1 core. But you need to perform encryption and decryption seperately which you will specifiy when running it.
 
-This is the syntax you want to use when executing the program. <your_program> <MBs_of_data> <Cores> <Mode>
+This is the syntax you want to use when executing the program. <your_program> <MBs_of_data> <Cores_> <Mode_>
 
 <your_program> : depending on the platform you use to code, compile, and execute this will vary. (I use VS code so its aead.exe/aead_updated.exe)
 
 <MBs_of_data> : Just the whole number of MB you want to process ie 100
 
-<Cores> : The number of threads the program will use to process the data also a whole number. Be sure to not exceed the number of cores just for consistency.
+<Cores_> : The number of threads the program will use to process the data also a whole number. Be sure to not exceed the number of cores just for consistency.
 
-<Mode> : Whether you are benchmarking encryption or decryption where 0 = ecyrption and 1 = decryption.
+<Mode_> : Whether you are benchmarking encryption or decryption where 0 = ecyrption and 1 = decryption.
 
 You should get an output like this
 
