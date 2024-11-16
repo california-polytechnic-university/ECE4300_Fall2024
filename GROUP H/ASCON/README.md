@@ -1,6 +1,7 @@
 All the code to run the benchmark for ASCON is in this folder. aead.c and aead_updated.c is what you need to compile and execute on your computers and the rest of the files are the dependancies required to run both codes so you will need to include them when compiling.
 
 aead.c : benchmarking using the driectory to files on your system. While this works it has its limitations when wanting to go bigger and bigger. and is not as robust.
+
 aead_updated.c : this code allows for processing "large" amounts of data by simply iterating benchmarking 1MB of data on a loop until you process the amount you desired
 
 Whats more this also allows us to benchmark multiple cores by using threads. Where 1 thread = 1 core. But you need to perform encryption and decryption seperately which you will specifiy when running it.
