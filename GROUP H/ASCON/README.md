@@ -12,7 +12,7 @@ This is the syntax you want to use when executing the program. <your_program> <M
 
 <Cores_> : The number of threads the program will use to process the data also a whole number. Be sure to not exceed the number of cores just for consistency.
 
-<Mode_> : Whether you are benchmarking encryption or decryption where 0 = ecyrption and 1 = decryption.
+<Mode_> : Whether you are benchmarking encryption or decryption where 0 = ecryption and 1 = decryption.
 
 You should get an output like this
 
