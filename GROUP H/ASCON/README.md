@@ -18,6 +18,9 @@ This is the syntax you want to use when executing the program. <your_program> <D
 You should get an output like this
 
 aead_updated.exe 100 1 1
+
 Running multithreaded decryption with 1 threads...
+
 Multithreaded decryption time for 100 MB: 7.537000 seconds
+
 Throughput: 13.267878 MB/s
