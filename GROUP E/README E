@@ -1,5 +1,12 @@
 Group E project for 4300...
 
+
+link to files...
+https://livecsupomona-my.sharepoint.com/my?id=%2Fpersonal%2Fiblekhman%5Fcpp%5Fedu%2FDocuments%2FDocuments%2Ezip&parent=%2Fpersonal%2Fiblekhman%5Fcpp%5Fedu%2FDocuments&ga=1 
+
+
+
+
 A couple of notes for the project...
 the virtual machines lack turbo boost(run at your max pre boost clock)
 
@@ -78,8 +85,3 @@ Other Factors:
 
 Memory Speed: Faster memory access can improve hashing speed, especially for larger files.
 Storage I/O: If reading the file from a slow storage device is a bottleneck, it will limit the overall hashing speed.
-
-
-
-
-
